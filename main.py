@@ -542,4 +542,4 @@ def download_draft(draft_id: str):
 if __name__ == "__main__":
     # Locally: python main.py   |   On Render the start command is: uvicorn main:app --host 0.0.0.0 --port $PORT
     import uvicorn
-    uvicorn.run("main:app", host="127.0.0.1", port=int(os.getenv("PORT") or 8000), reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=int(os.getenv("PORT") or 8000), reload=False)
