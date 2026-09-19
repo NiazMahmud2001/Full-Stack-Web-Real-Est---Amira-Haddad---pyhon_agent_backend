@@ -45,8 +45,6 @@ LLM_MAX_TOKENS = int(os.getenv('LLM_MAX_TOKENS') or 8000)  # free models cap out
 LLM_TIMEOUT_SECONDS = int(os.getenv('LLM_TIMEOUT_SECONDS') or 90)  # give up on a model that doesn't answer
 LLM_RETRIES = int(os.getenv('LLM_RETRIES') or 2)  # extra tries when the free provider is busy or times out
 
-# The website's URL isn't known when the backend is deployed, so any origin may call the API ("*").
-# Once you know it, set ALLOWED_ORIGINS=https://your-site.onrender.com,http://localhost:5173 on Render.
 ALLOWED_ORIGINS = [origin.strip() for origin in (os.getenv('ALLOWED_ORIGINS') or '*').split(',') if origin.strip()]
 
 
